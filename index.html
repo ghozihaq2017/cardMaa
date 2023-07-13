@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Secular+One&family=Shippori+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jquery Mobile -->
+    <!-- <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    /> -->
+    <!-- CSS Shake -->
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css" />
+    <!-- CSS Lokal -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="firstPage" id="halaman1">
+      <div class="card-1">
+        <img
+          src="./assets/img/kado.png"
+          alt="kado"
+          class="kado shake-slow shake-constant"
+          id="button1"
+          onclick="klikIni();"
+        />
+        <!-- <a id="button1" onClick="klikIni();" target="_blank" class="open">Open Gift</a> -->
+      </div>
+    </div>
+    <div class="secondPage" id="halaman2">
+      <div id="particles-js"></div>
+      <div class="konten">
+        <div class="fotoNuha">
+          <img src="./assets/img/maee2.jpeg" alt="nuha" id="fotoNu" width="150px" height="150px" />
+        </div>
+      </div>
+      <div id="subkonten" class="subkonten">
+        <p class="konten-text"><span id="text1" class="typing-text"></span></p>
+        <div id="tombolKlik">
+          <a class="button3" onClick="bukaWa();">Love u</a>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/particles.js"></script>
+    <script>
+      //Teks Isi
+      // let baris1 = 0,
+      //   text1;
+      // text1 = "Selamat ulang tahun nuhaa yang ke sekian belas";
+      // let baris2 = 0,
+      //   text2;
+      // text2 = "Gak kerasa yaa udah makin tua, makin gede sekarang";
+      // let baris3 = 0,
+      //   text3;
+      // text3 = "Tetep ceria yak yang udah jadi siswi putih abu-abu";
+      // let baris4 = 0,
+      //   text4;
+      // text4 = "Semoga makin tambah dewasa, gak gampang ngambek, makin sholehah";
+      // let baris5 = 0,
+      //   text5;
+      // text5 = "Pokoknya tahun ini harus udah bisa naik motorrr :))";
+
+      //Musik
+      function play() {
+        var audio = new Audio('https://lv3000.likeadream.repl.co/musik.mp3');
+        audio.play();
+        audio.loop = true;
+        audio.addEventListener(
+          'ended',
+          function () {
+            this.currentTime = 0;
+            this.play();
+          },
+          false,
+        );
+      }
+      function bukaWa() {
+        window.location =
+          'https://api.whatsapp.com/send?phone=6285211940014&text=I LOVE UUU SYANGKUUU' + '%0A%0A';
+      }
+    </script>
+    <!-- CDN Type.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- Jquery Mobile -->
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"
+      integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+  </body>
+</html>
